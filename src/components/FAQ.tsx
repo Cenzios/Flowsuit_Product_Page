@@ -45,7 +45,7 @@ const FAQSection = () => {
   return (
     <section
       id="faq"
-      className="relative min-h-screen bg-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
+      className="relative min-h-[60vh] bg-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
     >
       {/* Background Wave Image */}
       <motion.div

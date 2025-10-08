@@ -11,7 +11,7 @@ const DamageFlowSection = () => {
   return (
     <section
       id="damage-flow-control"
-      className="relative min-h-screen bg-white overflow-hidden"
+      className="relative min-h-[60vh] bg-white overflow-hidden"
     >
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -43,7 +43,7 @@ const DamageFlowSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16 min-h-[calc(100vh-8rem)]">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16 min-h-[60vh]">
           {/* Left Image */}
           <div className="lg:flex-1 w-full max-w-xl sm:max-w-2xl order-2 lg:order-1">
             <div className="relative">

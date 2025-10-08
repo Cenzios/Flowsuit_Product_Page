@@ -28,7 +28,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
   ];
 
   return (
-    <section className="relative bg-[#F94049] overflow-hidden">
+    <section className="relative bg-[#F94049] min-h-[60vh] overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -49,7 +49,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 min-h-[calc(100vh-8rem)]">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 min-h-[60vh]">
           {/* Left Content */}
           <div className="lg:flex-1 w-full space-y-8 lg:space-y-10 text-center lg:text-left">
             {/* Header */}

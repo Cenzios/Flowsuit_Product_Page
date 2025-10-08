@@ -18,7 +18,7 @@ const AffordablePlansSection = ({
   return (
     <section
       id="affordable-plans"
-      className="relative bg-[#F5F3F0] overflow-hidden py-16 md:py-20"
+      className="relative bg-[#F5F3F0] overflow-hidden min-h-[60vh] py-16 md:py-20"
     >
       {/* Background Wave Image - Left Side */}
       <motion.div
@@ -52,7 +52,7 @@ const AffordablePlansSection = ({
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center lg:items-end gap-10 lg:gap-16 min-h-[calc(100vh-8rem)]">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end gap-10 lg:gap-16 min-h-[60vh]">
           {/* Left Content */}
           <motion.div
             className="w-full lg:flex-1 space-y-8 text-left"

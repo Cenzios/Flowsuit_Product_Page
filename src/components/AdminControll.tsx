@@ -13,7 +13,10 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
   ];
 
   return (
-    <section id="admin-control" className="relative bg-white overflow-hidden">
+    <section
+      id="admin-control"
+      className="relative bg-white min-h-[60vh] overflow-hidden"
+    >
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -34,7 +37,7 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 min-h-[calc(100vh-8rem)]">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 min-h-[60vh]">
           {/* Left Image - Laptop */}
           <motion.div
             className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1 mx-auto lg:mx-0"

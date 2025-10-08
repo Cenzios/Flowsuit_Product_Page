@@ -15,7 +15,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
   return (
     <section
       id="inventory-reporting"
-      className="relative min-h-screen bg-[#F5F3F0] overflow-hidden"
+      className="relative min-h-[60vh] bg-[#F5F3F0] overflow-hidden"
     >
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -47,7 +47,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 min-h-[calc(100vh-8rem)]">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 min-h-[60vh]">
           {/* Left Content */}
           <motion.div
             className="lg:flex-1 w-full space-y-8"

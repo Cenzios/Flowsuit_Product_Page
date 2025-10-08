@@ -28,7 +28,7 @@ const DesignManagementSection = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 min-h-[60vh] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div

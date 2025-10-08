@@ -11,7 +11,7 @@ const DTFOrderingSection = () => {
   return (
     <section
       id="dtf-ordering"
-      className="relative bg-white overflow-hidden min-h-screen"
+      className="relative bg-white overflow-hidden min-h-[60vh]"
     >
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
