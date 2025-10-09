@@ -35,7 +35,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         {/* Header */}
         <motion.div
           className="text-center mb-10 sm:mb-12 lg:mb-16"
@@ -67,9 +67,9 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
 
         {/* Content */}
         <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
-          {/* Left Image */}
+          {/* Left Image with Labels */}
           <motion.div
-            className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1"
+            className="relative lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1"
             initial={{ opacity: 0, scale: 0.85, x: -40 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -81,13 +81,6 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
               transition={{ duration: 0.3 }}
               style={{ perspective: "1000px" }}
             >
-              {/* Glow */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gray-200/40 to-red-100/20 blur-2xl sm:blur-3xl rounded-lg transform scale-105"
-                animate={{ opacity: [0.4, 0.6, 0.4] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-
               {/* Invoice Image */}
               <motion.div
                 className="relative"
@@ -101,18 +94,46 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                   className="w-full h-auto object-contain drop-shadow-2xl"
                 />
               </motion.div>
+              {/* Orange Labels */}
+              {/* Top Left */}
+              <div className="absolute -top-6 -left-12">
+                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                    <Check size={12} className="text-[#FF4757]" />
+                  </span>
+                  Multiple Order Selection
+                </div>
+              </div>
 
-              {/* Accents */}
-              <motion.div
-                className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-red-200/30 rounded-full blur-lg sm:blur-xl"
-                animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-gray-200/40 rounded-full blur-lg sm:blur-xl"
-                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-              />
+              {/* Top Right */}
+              <div className="absolute -top-7 right-8">
+                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg relative z-10">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                    <Check size={12} className="text-[#FF4757]" />
+                  </span>
+                  Invoice
+                </div>
+              </div>
+
+              {/* Bottom Left */}
+              <div className="absolute -bottom-3 left-15">
+                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                    <Check size={12} className="text-[#FF4757]" />
+                  </span>
+                  Discounts
+                </div>
+              </div>
+
+              {/* Bottom Right / Bottom Center */}
+              <div className="absolute -bottom-4 -right-15">
+                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                    <Check size={12} className="text-[#FF4757]" />
+                  </span>
+                  Easy Invoice Generate
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -126,23 +147,10 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
           >
             {/* Section Header */}
             <div className="space-y-4 max-w-lg mx-auto lg:mx-0">
-              <h3
-                className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]"
-                style={{
-                  fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                  lineHeight: "1.3",
-                }}
-              >
+              <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]">
                 Smart Invoicing System
               </h3>
-              <p
-                className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
-                  lineHeight: "1.7",
-                }}
-              >
+              <p className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]">
                 Streamline billing with our Smart Invoicing system eliminating
                 errors, speeding up payments, and ensuring financial
                 transparency for smooth cash flow and a better customer
@@ -167,18 +175,11 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-red-500 stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                     </div>
                   </motion.div>
-                  <p
-                    className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
-                      lineHeight: "1.7",
-                    }}
-                  >
+                  <p className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]">
                     {feature}
                   </p>
                 </motion.div>
