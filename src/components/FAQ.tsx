@@ -95,7 +95,7 @@ const FAQSection = () => {
                 <span
                   className="pr-3 sm:pr-4 text-[15px] sm:text-[20px]"
                   style={{
-                    fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+                    fontFamily: "'Inter', 'Arial', sans-serif",
                     fontWeight: 600, // semi-bold
                     lineHeight: "28px",
                     color: "#1E1E1E",
