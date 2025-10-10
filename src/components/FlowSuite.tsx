@@ -105,7 +105,10 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-[#F94049] stroke-[2.5]" />
+                      <Check
+                        className="w-3.5 h-3.5 text-[#F94049] stroke-[5]
+"
+                      />
                     </div>
                   </motion.div>
                   <p
@@ -247,7 +250,10 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
                   <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-[#F94049] stroke-[2.5]" />
+                    <Check
+                      className="w-3.5 h-3.5 text-[#F94049] stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

@@ -17,25 +17,6 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
       id="try-free"
       className="relative bg-[#F5F3F0] min-h-[60vh] overflow-hidden"
     >
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-0 w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-gray-50 rounded-full blur-3xl opacity-50"
-          animate={{ scale: [1, 1.1, 1], x: [0, 20, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-0 w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-red-50 rounded-full blur-3xl opacity-30"
-          animate={{ scale: [1, 1.15, 1], x: [0, -20, 0] }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         {/* Desktop Layout */}
         <div className="hidden lg:flex flex-row items-center gap-16 min-h-[60vh]">
@@ -115,8 +96,11 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 360 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                      <Check
+                        className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                      />
                     </div>
                   </motion.div>
                   <p
@@ -313,8 +297,11 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                    <Check
+                      className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

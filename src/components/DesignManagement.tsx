@@ -168,7 +168,10 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-green-500 stroke-[2.5]" />
+                      <Check
+                        className="w-3.5 h-3.5 text-green-500 stroke-[5]
+"
+                      />
                     </div>
                   </motion.div>
                   <p

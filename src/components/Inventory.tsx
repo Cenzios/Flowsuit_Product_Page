@@ -24,25 +24,6 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
       id="inventory-reporting"
       className="relative min-h-[60vh] bg-[#F5F3F0] overflow-hidden"
     >
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/3 right-0 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, -20, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-0 w-80 h-80 bg-orange-50 rounded-full blur-3xl opacity-30"
-          animate={{ scale: [1, 1.15, 1], x: [0, 20, 0] }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         {/* Desktop Layout */}
         <div className="hidden lg:flex flex-row items-center gap-16 min-h-[60vh]">
@@ -123,8 +104,11 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                      <Check
+                        className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                      />
                     </div>
                   </motion.div>
                   <p
@@ -172,7 +156,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-sm font-medium px-4 py-1.5 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-sm font-medium px-4 py-1.5 rounded-lg shadow-xl flex items-center gap-2 drop-shadow-lg">
                     <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Check size={12} className="text-red-500 stroke-[3]" />
                     </span>
@@ -350,8 +334,11 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                    <Check
+                      className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

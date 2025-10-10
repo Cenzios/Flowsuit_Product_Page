@@ -142,8 +142,8 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-[#46A834]  flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                     </div>
                   </motion.div>
                   <p
@@ -241,8 +241,11 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                    <Check
+                      className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

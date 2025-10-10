@@ -95,9 +95,9 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               className="text-black leading-relaxed pr-20"
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontWeight: 400,
+                fontWeight: 400, // Regular weight
                 fontSize: "16px",
-                lineHeight: "1.7",
+                lineHeight: "32px", // Set line height to 32px
                 maxWidth: "600px",
               }}
             >

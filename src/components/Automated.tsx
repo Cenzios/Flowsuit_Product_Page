@@ -22,29 +22,6 @@ const AutomatedInventorySection = ({}: AutomatedInventorySectionProps) => {
       id="automated-inventory"
       className="relative min-h-[60vh] bg-[#F5F3F0] overflow-hidden"
     >
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-0 w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-orange-50 rounded-full blur-3xl opacity-50"
-          animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-0 w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 bg-yellow-50 rounded-full blur-3xl opacity-40"
-          animate={{ scale: [1, 1.15, 1], x: [0, -20, 0] }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-      </div>
-
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         {/* Desktop Layout */}
@@ -91,8 +68,11 @@ const AutomatedInventorySection = ({}: AutomatedInventorySectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                      <Check
+                        className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                      />
                     </div>
                   </motion.div>
                   <p
@@ -134,7 +114,7 @@ const AutomatedInventorySection = ({}: AutomatedInventorySectionProps) => {
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-4 py-1.5 rounded-lg shadow-xl flex items-center gap-2 drop-shadow-lg">
                     <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Check size={12} className="text-red-500 stroke-[3]" />
                     </span>
@@ -312,8 +292,11 @@ const AutomatedInventorySection = ({}: AutomatedInventorySectionProps) => {
                 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                    <Check
+                      className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

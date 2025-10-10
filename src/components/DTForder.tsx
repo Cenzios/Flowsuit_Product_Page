@@ -81,7 +81,7 @@ const DTFOrderingSection = () => {
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-4 py-1.5 rounded-lg shadow-xl flex items-center gap-2 drop-shadow-lg">
                     <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Check size={12} className="text-red-500 stroke-[3]" />
                     </span>
@@ -91,8 +91,6 @@ const DTFOrderingSection = () => {
               ))}
 
               {/* Decorative corner accents */}
-              <div className="absolute -top-3 -left-3 w-16 h-16 sm:w-20 sm:h-20 bg-orange-200/40 rounded-full blur-xl" />
-              <div className="absolute -bottom-3 -right-3 w-20 h-20 sm:w-24 sm:h-24 bg-green-200/30 rounded-full blur-xl" />
             </div>
           </div>
 
@@ -129,8 +127,11 @@ const DTFOrderingSection = () => {
                   className="flex items-start justify-start gap-3 mx-auto lg:mx-0 max-w-md sm:max-w-none"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                      <Check
+                        className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                      />
                     </div>
                   </div>
                   <p
@@ -283,8 +284,11 @@ const DTFOrderingSection = () => {
                 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
+                    <Check
+                      className="w-3.5 h-3.5 text-white stroke-[5]
+"
+                    />
                   </div>
                 </motion.div>
                 <p

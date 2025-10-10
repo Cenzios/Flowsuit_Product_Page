@@ -14,7 +14,7 @@ const FAQSection = () => {
     {
       question: "How much is the price?",
       answer:
-        "Pricing is based on your custom requirements, and we’ll be happy to discuss it after our first call. Don't hesitate to reach out just dial 0711186028 to get started!",
+        "Pricing is based on your custom requirements, and we’ll be happy to discuss it after our first call. Don't hesitate to reach out — just dial 0711186028 to get started!",
     },
     {
       question: "What about the service period?",
@@ -49,16 +49,16 @@ const FAQSection = () => {
     >
       {/* Background Wave Image */}
       <motion.div
-        className="absolute inset-0 pointer-events-none opacity-10"
-        initial={{ opacity: 0, scale: 1.1 }}
-        whileInView={{ opacity: 0.1, scale: 1 }}
+        className="absolute inset-0 z-0 pointer-events-none"
+        initial={{ opacity: 0, scale: 1.05 }}
+        whileInView={{ opacity: 0.4, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
       >
         <img
-          src="images/waves.png"
-          alt=""
-          className="w-full h-full object-cover"
+          src="/images/waves.png"
+          alt="Background Waves"
+          className="w-full h-full object-cover rotate-90"
         />
       </motion.div>
 
@@ -79,25 +79,26 @@ const FAQSection = () => {
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-4 sm:space-y-5">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-[#F8F8F8] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-[#F8F8F8] rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all duration-300 hover:shadow-[0_10px_32px_rgba(0,0,0,0.20)]"
+              whileHover={{ scale: 1.01 }}
             >
               {/* Question */}
               <motion.button
                 className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left group"
                 onClick={() => toggleFAQ(index)}
-                whileHover={{ backgroundColor: "#F5F5F5" }}
                 transition={{ duration: 0.2 }}
               >
                 <span
-                  className="text-black pr-3 sm:pr-4 text-base sm:text-lg md:text-xl"
+                  className="pr-3 sm:pr-4 text-[15px] sm:text-[20px]"
                   style={{
                     fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                    fontWeight: 400, // changed from 600 to 400 (not bold)
-                    lineHeight: "1.4",
+                    fontWeight: 600, // semi-bold
+                    lineHeight: "28px",
+                    color: "#1E1E1E",
                   }}
                 >
                   {faq.question}
@@ -125,9 +126,9 @@ const FAQSection = () => {
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    initial={{ height: 0, opacity: 0, y: -5 }}
+                    animate={{ height: "auto", opacity: 1, y: 0 }}
+                    exit={{ height: 0, opacity: 0, y: -5 }}
                     transition={{
                       duration: 0.3,
                       ease: [0.25, 0.4, 0.25, 1],
@@ -136,11 +137,12 @@ const FAQSection = () => {
                   >
                     <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1">
                       <p
-                        className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-[16px]"
+                        className="text-[14px] sm:text-[18px]"
                         style={{
                           fontFamily: "'Inter', sans-serif",
                           fontWeight: 400,
-                          lineHeight: "1.7",
+                          lineHeight: "28px",
+                          color: "#6A6D9E",
                         }}
                       >
                         {faq.answer}
@@ -149,7 +151,7 @@ const FAQSection = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
