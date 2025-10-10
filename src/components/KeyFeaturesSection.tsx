@@ -16,6 +16,17 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
       id="features"
       className="relative min-h-[60vh] bg-white overflow-hidden"
     >
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.img
+          src="/images/rocket.png"
+          alt="Rocket"
+          className="w-full h-auto sm:w-64 sm:h-64 object-contain mx-auto lg:hidden md:hidden sm:hidden"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         {/* Desktop Header */}
         <motion.div
@@ -160,7 +171,15 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
               <h3 className="text-black font-bold leading-tight text-[26px]">
                 Smart Invoicing System
               </h3>
-              <p className="text-black leading-relaxed text-[16px]">
+              <p
+                className="text-black leading-relaxed text-[16px]"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 300,
+                  lineHeight: "1.7",
+                }}
+              >
                 Streamline billing with our Smart Invoicing system eliminating
                 errors, speeding up payments, and ensuring financial
                 transparency for smooth cash flow and a better customer
@@ -189,7 +208,15 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                       <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                     </div>
                   </motion.div>
-                  <p className="text-black leading-relaxed text-left text-[16px]">
+                  <p
+                    className="text-black leading-relaxed text-left text-[16px]"
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: "16px",
+                      fontWeight: 300,
+                      lineHeight: "1.7",
+                    }}
+                  >
                     {feature}
                   </p>
                 </motion.div>
@@ -232,8 +259,8 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "14px",
-              fontWeight: 400,
-              lineHeight: "1.6",
+              fontWeight: 300,
+              lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +293,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              fontWeight: 400,
+              fontWeight: 300,
               lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: 10 }}
@@ -304,7 +331,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -320,7 +347,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -336,7 +363,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.8 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -352,7 +379,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -374,7 +401,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                 transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
               >
                 <motion.div className="flex-shrink-0 mt-0.5">
-                  <div className="w-5 h-5 rounded-full bg-[#46A834]  flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
                     <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                   </div>
                 </motion.div>
@@ -383,6 +410,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
+                    fontWeight: 300,
                     lineHeight: "1.7",
                   }}
                 >
