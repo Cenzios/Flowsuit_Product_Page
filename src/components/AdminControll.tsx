@@ -112,7 +112,8 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                 className="text-black leading-relaxed text-lg"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
+                  fontSize: "16px",
+                  fontWeight: 300,
                   lineHeight: "1.7",
                 }}
                 initial={{ opacity: 0, y: 15 }}
@@ -150,7 +151,8 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                     className="text-black leading-relaxed text-left break-words text-base"
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontSize: "16px",
+                      fontWeight: 300,
                       lineHeight: "1.7",
                     }}
                   >
@@ -184,7 +186,7 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
             className="text-black leading-relaxed text-left"
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontWeight: 400,
+              fontWeight: 300,
               fontSize: "15px",
               lineHeight: "1.7",
             }}
@@ -252,7 +254,7 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                   className="text-black leading-relaxed text-left break-words"
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     fontSize: "15px",
                     lineHeight: "1.7",
                   }}
