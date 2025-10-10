@@ -49,9 +49,10 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 min-h-[60vh]">
-          {/* Left Content */}
-          <div className="lg:flex-1 w-full space-y-8 lg:space-y-10 text-center lg:text-left">
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex flex-row items-center gap-16 min-h-[60vh]">
+          {/* Left Content - Desktop */}
+          <div className="flex-1 w-full space-y-10">
             {/* Header */}
             <motion.div
               className="space-y-4"
@@ -71,7 +72,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
                 HOW IT WORKS
               </span>
               <h2
-                className="text-white leading-tight text-3xl sm:text-4xl md:text-5xl"
+                className="text-white leading-tight text-5xl"
                 style={{
                   fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
                   fontWeight: 700,
@@ -87,7 +88,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
             </motion.div>
 
             {/* Features List */}
-            <div className="space-y-4 sm:space-y-5 lg:space-y-6 max-w-md mx-auto lg:mx-0">
+            <div className="space-y-6 max-w-md">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -108,7 +109,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
                     </div>
                   </motion.div>
                   <p
-                    className="text-white leading-relaxed text-left break-words text-sm sm:text-base"
+                    className="text-white leading-relaxed text-left break-words text-base"
                     style={{
                       fontFamily: "'Inter', sans-serif",
                       fontWeight: 400,
@@ -122,9 +123,9 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
             </div>
           </div>
 
-          {/* Right Image - Laptop */}
+          {/* Right Image - Desktop */}
           <motion.div
-            className="lg:flex-1 w-full max-w-2xl mb-12 lg:mb-0"
+            className="flex-1 w-full max-w-2xl"
             initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
@@ -165,7 +166,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
               <motion.img
                 src="/images/logo.png"
                 alt="Logo"
-                className="absolute top-1/2 left-1/2 w-32 md:w-40 lg:w-48 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg"
+                className="absolute top-1/2 left-1/2 w-48 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -190,6 +191,122 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
                   ease: "easeInOut",
                   delay: 0.5,
                 }}
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Mobile Layout: Yellow Text → Header → Points → Image */}
+        <div className="lg:hidden w-full space-y-6">
+          {/* Mobile Yellow Text */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span
+              className="inline-block font-bold tracking-widest uppercase text-[#FCE864]"
+              style={{
+                fontSize: "12px",
+                fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+                letterSpacing: "2px",
+              }}
+            >
+              HOW IT WORKS
+            </span>
+          </motion.div>
+
+          {/* Mobile Header */}
+          <motion.h2
+            className="text-white leading-tight text-left"
+            style={{
+              fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+              fontWeight: 700,
+              fontSize: "36px",
+              lineHeight: "1.3",
+            }}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Smart & Simple Management
+          </motion.h2>
+
+          {/* Mobile Features List */}
+          <div className="space-y-4">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-3 justify-start text-left"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: feature.delay }}
+              >
+                <motion.div className="flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center">
+                    <Check className="w-3.5 h-3.5 text-[#F94049] stroke-[2.5]" />
+                  </div>
+                </motion.div>
+                <p
+                  className="text-white leading-relaxed text-left break-words"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "15px",
+                    lineHeight: "1.7",
+                  }}
+                >
+                  {feature.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile Image */}
+          <motion.div
+            className="w-full pt-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* Glow effect behind laptop */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-300/20 to-white/20 blur-3xl rounded-full transform scale-110"
+                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+
+              {/* Laptop Image */}
+              <motion.img
+                src="/images/macbook.png"
+                alt="Laptop"
+                className="relative w-full h-auto object-contain drop-shadow-2xl"
+                initial={{ filter: "brightness(0.8)" }}
+                whileInView={{ filter: "brightness(1)" }}
+                transition={{ duration: 0.8 }}
+              />
+
+              {/* Centered Logo on Laptop */}
+              <motion.img
+                src="/images/logo.png"
+                alt="Logo"
+                className="absolute top-1/2 left-1/2 w-24 sm:w-32 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               />
             </motion.div>
           </motion.div>
