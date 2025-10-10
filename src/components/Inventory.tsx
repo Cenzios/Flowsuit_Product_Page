@@ -69,7 +69,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 className="text-black leading-relaxed max-w-lg"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 300,
                   fontSize: "16px",
                   lineHeight: "1.7",
                 }}
@@ -115,7 +115,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                     className="text-black leading-relaxed"
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "1.7",
                     }}
@@ -223,7 +223,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              fontWeight: 400,
+              fontWeight: 300,
               lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: 10 }}
@@ -346,7 +346,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     lineHeight: "1.7",
                   }}
                 >
