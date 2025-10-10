@@ -107,8 +107,8 @@ const AffordablePlansSection = ({
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-red-500 stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                     </div>
                   </motion.div>
                   <p
