@@ -115,7 +115,8 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
                     className="text-white leading-relaxed text-left break-words text-base"
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontSize: "16px",
+                      fontWeight: 300,
                       lineHeight: "1.7",
                     }}
                   >
