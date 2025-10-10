@@ -111,6 +111,8 @@ const DTFOrderingSection = () => {
                 className="text-black leading-relaxed text-base sm:text-[16px] md:text-[17px] font-normal"
                 style={{
                   fontFamily: "'Inter', sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 300,
                   lineHeight: "1.7",
                 }}
               >
@@ -138,6 +140,8 @@ const DTFOrderingSection = () => {
                     className="text-black text-left leading-relaxed text-[15px] sm:text-[16px] font-normal"
                     style={{
                       fontFamily: "'Inter', sans-serif",
+                      fontSize: "16px",
+                      fontWeight: 300,
                       lineHeight: "1.7",
                     }}
                   >
@@ -174,7 +178,7 @@ const DTFOrderingSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              fontWeight: 400,
+              fontWeight: 300,
               lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: 10 }}
@@ -296,7 +300,7 @@ const DTFOrderingSection = () => {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     lineHeight: "1.7",
                   }}
                 >
