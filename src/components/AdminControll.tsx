@@ -94,17 +94,17 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
             {/* Header */}
             <div className="space-y-4 sm:space-y-5 max-w-md lg:max-w-full">
               <motion.h2
-                className="text-black leading-tight text-xl sm:text-2xl md:text-2xl"
+                className="text-black leading-tight font-bold"
                 style={{
                   fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "1.3",
+                  fontSize: "44px",
+                  lineHeight: "1.2",
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
               >
-                Powerful Admin Control
+                <span className="text-[#FF4757]">Poweful</span> Admin Control
               </motion.h2>
 
               <motion.p
@@ -141,8 +141,8 @@ const AdminControlSection = ({}: AdminControlSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-red-500 stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                     </div>
                   </motion.div>
                   <p
