@@ -1,22 +1,83 @@
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
+  // Smooth staggered animation for text and buttons
+  const containerVariants: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  // ✅ Fixed TypeScript error with easing (added type assertion)
+  const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.42, 0, 0.58, 1] as [number, number, number, number], // ✅ type-safe fix
+      },
+    },
+  };
+
   return (
-    <section className="relative bg-cover bg-center bg-[#FFE4DE] bg-no-repeat overflow-hidden pt-16">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+    // ✅ Reduced section height (was min-h-[60vh], now min-h-[50vh])
+    <section className="relative bg-[#FFE4DE] overflow-hidden min-h-[50vh] flex items-center">
+      {/* Animated gradient background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-[#FFE4DE] via-[#FFF5F2] to-[#FFDAD6]"
+        animate={{
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        style={{
+          backgroundSize: "200% 200%",
+        }}
+      />
+
+      {/* Soft glowing circles for atmosphere */}
+      <motion.div
+        className="absolute top-20 left-10 w-64 h-64 bg-red-200/30 rounded-full blur-3xl"
+        animate={{
+          x: [0, 30, 0],
+          y: [0, 20, 0],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-10 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl"
+        animate={{
+          x: [0, -25, 0],
+          y: [0, -15, 0],
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Main content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
           {/* Left Text Content */}
           <motion.div
             className="max-w-2xl space-y-6 lg:space-y-8 lg:flex-1 text-center lg:text-left"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
           >
             <motion.h1
+              variants={fadeUp}
               className="text-black leading-tight"
               style={{
                 fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
@@ -24,15 +85,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 fontSize: "clamp(28px, 6vw, 50px)",
                 lineHeight: "1.2",
               }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
             >
               Smarter <span className="text-[#F94049]">Apparel Management</span>{" "}
               Starts <br className="hidden sm:block" /> Here
             </motion.h1>
 
             <motion.p
+              variants={fadeUp}
               className="text-black leading-relaxed pr-0 lg:pr-20 mx-auto lg:mx-0"
               style={{
                 fontFamily: "'Inter', sans-serif",
@@ -41,9 +100,6 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 lineHeight: "1.7",
                 maxWidth: "600px",
               }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             >
               Gain full control of your production cycle with advanced
               dashboards, real-time tracking, reporting, and powerful admin
@@ -51,10 +107,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </motion.p>
 
             <motion.div
+              variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             >
               <motion.button
                 onClick={() => scrollToSection("contact")}
@@ -77,11 +131,20 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.02 }}
           >
-            <img
+            <motion.img
               src="/images/hero.png"
               alt="Hero Illustration"
               className="w-full h-auto object-contain rounded-lg mt-6 sm:mt-10"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             />
           </motion.div>
         </div>
