@@ -206,7 +206,7 @@ const DepartmentsSection = () => {
           <motion.p className="text-[#FF4757] font-bold tracking-wider mb-4">
             EACH STEP, ORGANIZED
           </motion.p>
-          <motion.h2 className="text-black font-bold text-3xl lg:text-[44px]">
+          <motion.h2 className="text-black font-bold text-2xl lg:text-[44px]">
             Streamline Your Production
             <br />
             With Dedicated Departments
