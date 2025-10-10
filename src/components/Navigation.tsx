@@ -24,7 +24,7 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50"
+      className="fixed top-0 left-0 right-0 bg-[#FFE4DE] shadow-sm z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
