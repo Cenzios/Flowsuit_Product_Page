@@ -45,7 +45,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
           transition={{ duration: 0.7 }}
         >
           <motion.p
-            className="text-[#FF4757] font-bold tracking-wider mb-3 sm:mb-4"
+            className="text-red-500 font-bold tracking-wider mb-3 sm:mb-4"
             style={{
               fontSize: "14px",
               fontFamily: "'Inter', sans-serif",
@@ -94,46 +94,75 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                   className="w-full h-auto object-contain drop-shadow-2xl"
                 />
               </motion.div>
-              {/* Orange Labels */}
+
+              {/* Red/Orange Labels with White Checkmarks */}
               {/* Top Left */}
-              <div className="absolute -top-6 -left-12">
-                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
-                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                    <Check size={12} className="text-[#FF4757]" />
+              <motion.div
+                className="absolute -top-6 -left-2 z-20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-red-500 stroke-[3]" />
                   </span>
                   Multiple Order Selection
                 </div>
-              </div>
+              </motion.div>
 
               {/* Top Right */}
-              <div className="absolute -top-7 right-8">
-                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg relative z-10">
-                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                    <Check size={12} className="text-[#FF4757]" />
+              <motion.div
+                className="absolute -top-7 right-8 z-20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.65 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-red-500 stroke-[3]" />
                   </span>
                   Invoice
                 </div>
-              </div>
+              </motion.div>
 
               {/* Bottom Left */}
-              <div className="absolute -bottom-3 left-15">
-                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
-                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                    <Check size={12} className="text-[#FF4757]" />
+              <motion.div
+                className="absolute -bottom-3 left-15 z-20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-red-500 stroke-[3]" />
                   </span>
                   Discounts
                 </div>
-              </div>
+              </motion.div>
 
               {/* Bottom Right / Bottom Center */}
-              <div className="absolute -bottom-4 -right-15">
-                <div className="bg-[#FF4757] text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
-                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                    <Check size={12} className="text-[#FF4757]" />
+              <motion.div
+                className="absolute -bottom-4 right-0 z-20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.95 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs sm:text-sm font-medium px-3 py-1 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-red-500 stroke-[3]" />
                   </span>
                   Easy Invoice Generate
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
 
@@ -167,7 +196,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
                 >
                   <motion.div
@@ -175,7 +204,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center">
+                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
                       <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                     </div>
                   </motion.div>
