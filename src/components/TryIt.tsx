@@ -15,7 +15,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
   return (
     <section
       id="try-free"
-      className="relative bg-white min-h-[60vh] overflow-hidden"
+      className="relative bg-[#F5F3F0] min-h-[60vh] overflow-hidden"
     >
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -37,16 +37,17 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 min-h-[60vh]">
-          {/* Left Content */}
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex flex-row items-center gap-16 min-h-[60vh]">
+          {/* Left Content - Desktop */}
           <motion.div
-            className="lg:flex-1 w-full space-y-6 sm:space-y-8 lg:space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0"
+            className="flex-1 w-full space-y-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
             {/* Header */}
-            <div className="space-y-4 sm:space-y-5 max-w-lg lg:max-w-full">
+            <div className="space-y-5">
               <motion.h2
                 className="text-black leading-tight font-bold"
                 style={{
@@ -94,11 +95,11 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
             </motion.h3>
 
             {/* Features List */}
-            <div className="space-y-4 sm:space-y-5 w-full max-w-md lg:max-w-full">
+            <div className="space-y-5">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start gap-3 sm:gap-4 group justify-center lg:justify-start"
+                  className="flex items-start gap-4 group justify-start"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -134,16 +135,17 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
 
             {/* CTA Button */}
             <motion.div
-              className="flex justify-center lg:justify-start pt-2"
+              className="flex justify-start pt-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7, ease: "easeInOut" }}
             >
               <motion.button
-                className="bg-[#FF4757] hover:bg-[#FF3545] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base px-8 sm:px-10 md:px-6 py-3 sm:py-4 uppercase tracking-wide"
+                className="bg-[#FF4757] hover:bg-[#FF3545] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 px-10 py-4 uppercase tracking-wide"
                 style={{
                   fontFamily: "'Inter', sans-serif",
+                  fontSize: "16px",
                   letterSpacing: "1px",
                 }}
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -155,9 +157,9 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
             </motion.div>
           </motion.div>
 
-          {/* Right Image - Woman with Laptop */}
+          {/* Right Image - Desktop */}
           <motion.div
-            className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl mx-auto lg:mx-0"
+            className="flex-1 w-full max-w-2xl"
             initial={{ opacity: 0, scale: 0.85, x: 50 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -169,7 +171,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
             >
               {/* Subtle shadow effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gray-200/20 to-transparent blur-2xl rounded-lg transform translate-y-4 sm:translate-y-6 md:translate-y-8"
+                className="absolute inset-0 bg-gradient-to-br from-gray-200/20 to-transparent blur-2xl rounded-lg transform translate-y-8"
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{
                   duration: 4,
@@ -180,7 +182,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
 
               {/* Woman with Laptop Image */}
               <motion.img
-                src="/images/tryit.png"
+                src="/images/girl.png"
                 alt="Try FlowSuite Free Demo"
                 className="relative w-full h-auto object-contain drop-shadow-2xl"
                 initial={{ filter: "brightness(0.95)" }}
@@ -190,7 +192,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
 
               {/* Corner accent */}
               <motion.div
-                className="absolute -top-4 -right-4 w-16 sm:w-20 h-16 sm:h-20 bg-red-100 rounded-full blur-xl opacity-60"
+                className="absolute -top-4 -right-4 w-20 h-20 bg-red-100 rounded-full blur-xl opacity-60"
                 animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.6, 0.4] }}
                 transition={{
                   duration: 3,
@@ -201,7 +203,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
 
               {/* Bottom left accent */}
               <motion.div
-                className="absolute -bottom-4 -left-4 w-20 sm:w-24 h-20 sm:h-24 bg-green-100 rounded-full blur-xl opacity-50"
+                className="absolute -bottom-4 -left-4 w-24 h-24 bg-green-100 rounded-full blur-xl opacity-50"
                 animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{
                   duration: 3.5,
@@ -211,6 +213,145 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                 }}
               />
             </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Mobile Layout: Header → Image → Description → Question → Points → Button */}
+        <div className="lg:hidden w-full space-y-6">
+          {/* Mobile Header */}
+          <motion.h2
+            className="text-black leading-tight font-bold text-center"
+            style={{
+              fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+              fontSize: "24px",
+              lineHeight: "1.3",
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+          >
+            Try It <span className="text-[#FF4757]">Free</span> for 2 Months
+          </motion.h2>
+
+          {/* Mobile Image */}
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeInOut" }}
+          >
+            <motion.div className="relative">
+              {/* Subtle shadow effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-gray-200/20 to-transparent blur-2xl rounded-lg transform translate-y-4"
+                animate={{ opacity: [0.3, 0.5, 0.3] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+
+              {/* Woman with Laptop Image */}
+              <motion.img
+                src="/images/girl.png"
+                alt="Try FlowSuite Free Demo"
+                className="relative w-full h-auto object-contain drop-shadow-2xl"
+                initial={{ filter: "brightness(0.95)" }}
+                whileInView={{ filter: "brightness(1)" }}
+                transition={{ duration: 0.8 }}
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Mobile Description */}
+          <motion.p
+            className="text-black leading-relaxed text-left"
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "15px",
+              fontWeight: 400,
+              lineHeight: "1.7",
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
+          >
+            We're offering a free 2-month demo of our advanced apparel
+            management system! Try it now to see how it can simplify your work,
+            improve efficiency, and make managing production easier.
+          </motion.p>
+
+          {/* Mobile What's Included Header */}
+          <motion.h3
+            className="text-black font-bold text-left pt-2"
+            style={{
+              fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+              fontSize: "16px",
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+          >
+            What's Included in Your Free Demo?
+          </motion.h3>
+
+          {/* Mobile Features List */}
+          <div className="space-y-4">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-3 justify-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.4 + index * 0.1,
+                  ease: "easeInOut",
+                }}
+              >
+                <motion.div className="flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  </div>
+                </motion.div>
+                <p
+                  className="text-black leading-relaxed text-left font-medium"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "15px",
+                    lineHeight: "1.6",
+                  }}
+                >
+                  {feature}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile CTA Button */}
+          <motion.div
+            className="pt-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.7, ease: "easeInOut" }}
+          >
+            <motion.button
+              className="bg-[#FF4757] hover:bg-[#FF3545] text-white font-bold rounded-lg shadow-lg w-full py-3 uppercase tracking-wide"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "14px",
+                letterSpacing: "1px",
+              }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => scrollToSection && scrollToSection("contact")}
+            >
+              Schedule My Demo
+            </motion.button>
           </motion.div>
         </div>
       </div>
