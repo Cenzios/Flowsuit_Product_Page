@@ -12,9 +12,10 @@ import Automated from "./components/Automated";
 import DamageFlowSection from "./components/DamageFlow";
 import AdvancedPricingSection from "./components/PricingSystem";
 import DTForder from "./components/DTForder";
-import Plans from "./components/Plans";
+// import Plans from "./components/Plans";
 import FAQSection from "./components/FAQ";
 import CTASection from "./components/ContactUs";
+import TryIt from "./components/TryIt";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -85,6 +86,7 @@ const App = () => {
       <div id="flowsuite">
         <FlowSuiteSection />
         <AdminControlSection />
+
         <Steps />
       </div>
 
@@ -101,7 +103,8 @@ const App = () => {
       <div id="pricing">
         <AdvancedPricingSection />
         <DTForder />
-        <Plans />
+        <TryIt />
+        {/* <Plans /> */}
         <FAQSection />
       </div>
 
