@@ -30,10 +30,10 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   };
 
   return (
-    // ✅ Reduced section height (was min-h-[60vh], now min-h-[50vh])
-    <section className="relative bg-[#FFE4DE] overflow-hidden min-h-[50vh] flex items-center">
+    // ✅ Reduced section height (was min-h-[60vh], now min-h-[70vh])
+    <section className="relative bg-[#FFE4DE] overflow-hidden min-h-[60vh] flex items-center pt-10">
       {/* Animated gradient background */}
-      <motion.div
+      {/* <motion.div
         className="absolute inset-0 bg-gradient-to-br from-[#FFE4DE] via-[#FFF5F2] to-[#FFDAD6]"
         animate={{
           backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -46,7 +46,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         style={{
           backgroundSize: "200% 200%",
         }}
-      />
+      /> */}
 
       {/* Soft glowing circles for atmosphere */}
       <motion.div
@@ -67,11 +67,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-27">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
-          {/* Left Text Content */}
+          {/* Left Text Content - Desktop */}
           <motion.div
-            className="max-w-2xl space-y-6 lg:space-y-8 lg:flex-1 text-center lg:text-left"
+            className="hidden lg:block max-w-2xl space-y-8 lg:flex-1"
             variants={containerVariants}
             initial="hidden"
             animate="show"
@@ -82,7 +82,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               style={{
                 fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(28px, 6vw, 50px)",
+                fontSize: "50px",
                 lineHeight: "1.2",
               }}
             >
@@ -92,11 +92,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
 
             <motion.p
               variants={fadeUp}
-              className="text-black leading-relaxed pr-0 lg:pr-20 mx-auto lg:mx-0"
+              className="text-black leading-relaxed pr-20"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 400,
-                fontSize: "clamp(14px, 3vw, 16px)",
+                fontSize: "16px",
                 lineHeight: "1.7",
                 maxWidth: "600px",
               }}
@@ -106,16 +106,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               tools all in one system.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
+            <motion.div variants={fadeUp} className="flex gap-4">
               <motion.button
                 onClick={() => scrollToSection("contact")}
-                className="bg-red-500 hover:bg-red-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg font-semibold transition-colors duration-200 text-center shadow-lg"
+                className="bg-red-500 hover:bg-red-600 text-white px-12 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: "clamp(14px, 3vw, 16px)",
+                  fontSize: "16px",
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -125,18 +122,95 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </motion.div>
           </motion.div>
 
-          {/* Right Image */}
+          {/* Mobile Layout: Header → Description → Image → Button */}
           <motion.div
-            className="lg:flex-1 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+            className="lg:hidden w-full space-y-4 "
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+          >
+            {/* Mobile Header */}
+            <motion.h1
+              variants={fadeUp}
+              className="text-black leading-tight text-left"
+              style={{
+                fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+                fontWeight: 700,
+                fontSize: "36px",
+                lineHeight: "1.3",
+              }}
+            >
+              Smarter <span className="text-[#F94049]">Apparel Management</span>{" "}
+              Starts Here
+            </motion.h1>
+
+            {/* Mobile Description */}
+            <motion.p
+              variants={fadeUp}
+              className="text-black leading-relaxed text-left"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 400,
+                fontSize: "15px",
+                lineHeight: "1.7",
+              }}
+            >
+              Gain full control of your production cycle with advanced
+              dashboards, real-time tracking, reporting, and powerful admin
+              tools all in one system
+            </motion.p>
+
+            {/* Mobile Button */}
+            <motion.div variants={fadeUp} className="pt-2">
+              <motion.button
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#F94049] hover:bg-red-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg w-full"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "14px",
+                  letterSpacing: "0.5px",
+                }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                CONTACT US
+              </motion.button>
+            </motion.div>
+
+            {/* Mobile Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            >
+              <motion.img
+                src="/images/tryit.png"
+                alt="Hero Illustration"
+                className="w-full h-auto object-contain rounded-lg"
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Right Image - Desktop Only */}
+          <motion.div
+            className="hidden lg:block lg:flex-1 w-full max-w-xl xl:max-w-2xl mx-auto"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             whileHover={{ scale: 1.02 }}
           >
             <motion.img
-              src="/images/hero.png"
+              src="/images/tryit.png"
               alt="Hero Illustration"
-              className="w-full h-auto object-contain rounded-lg mt-6 sm:mt-10"
+              className="w-full h-auto object-contain rounded-lg"
               animate={{
                 y: [0, -10, 0],
               }}
