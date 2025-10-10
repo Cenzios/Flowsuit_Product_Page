@@ -48,7 +48,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "16px",
-                  fontWeight: 400,
+                  fontWeight: 300,
                   lineHeight: "1.7",
                 }}
                 initial={{ opacity: 0, y: 15 }}
@@ -65,8 +65,9 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
             <motion.h3
               className="text-black font-bold"
               style={{
-                fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+                fontFamily: "'Inter', 'Arial', sans-serif",
                 fontSize: "18px",
+                fontWeight: 600,
               }}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -97,10 +98,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                     transition={{ duration: 0.4 }}
                   >
                     <div className="w-5 h-5 rounded-full bg-[#46A834] flex items-center justify-center">
-                      <Check
-                        className="w-3.5 h-3.5 text-white stroke-[5]
-"
-                      />
+                      <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                     </div>
                   </motion.div>
                   <p
@@ -108,7 +106,8 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                     style={{
                       fontFamily: "'Inter', sans-serif",
                       fontSize: "16px",
-                      lineHeight: "1.6",
+                      fontWeight: 300,
+                      lineHeight: "1.7",
                     }}
                   >
                     {feature}
@@ -255,7 +254,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              fontWeight: 400,
+              fontWeight: 300,
               lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: 10 }}
@@ -271,8 +270,9 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
           <motion.h3
             className="text-black font-bold text-left pt-2"
             style={{
-              fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+              fontFamily: "'Inter', 'Arial', sans-serif",
               fontSize: "16px",
+              fontWeight: 600,
             }}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -309,6 +309,7 @@ const TryFreeSection = ({ scrollToSection }: TryFreeSectionProps) => {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
+                    fontWeight: 300,
                     lineHeight: "1.6",
                   }}
                 >
