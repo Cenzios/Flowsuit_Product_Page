@@ -67,7 +67,7 @@ const FAQSection = () => {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <h2
-            className="text-black leading-tight text-2xl sm:text-3xl lg:text-[26px]"
+            className="text-black leading-tight text-3xl sm:text-3xl lg:text-[32px]"
             style={{
               fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
               fontWeight: 700,
