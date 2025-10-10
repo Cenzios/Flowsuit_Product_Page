@@ -83,7 +83,7 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="bg-[#F8F8F8] rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all duration-300 hover:shadow-[0_10px_32px_rgba(0,0,0,0.20)]"
+              className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all duration-300 hover:shadow-[0_10px_32px_rgba(0,0,0,0.20)] p-2"
               whileHover={{ scale: 1.01 }}
             >
               {/* Question */}
@@ -96,7 +96,7 @@ const FAQSection = () => {
                   className="pr-3 sm:pr-4 text-[15px] sm:text-[20px]"
                   style={{
                     fontFamily: "'Inter', 'Arial', sans-serif",
-                    fontWeight: 600, // semi-bold
+                    fontWeight: 500, // semi-bold
                     lineHeight: "28px",
                     color: "#1E1E1E",
                   }}
