@@ -108,7 +108,7 @@ const DamageFlowSection = () => {
                 className="text-black leading-relaxed mx-auto lg:mx-0 max-w-lg"
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 300,
                   fontSize: "16px",
                   lineHeight: "1.7",
                 }}
@@ -142,7 +142,7 @@ const DamageFlowSection = () => {
                     className="text-black leading-relaxed max-w-xs sm:max-w-md lg:max-w-none"
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "1.7",
                     }}
@@ -180,7 +180,7 @@ const DamageFlowSection = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              fontWeight: 400,
+              fontWeight: 300,
               lineHeight: "1.7",
             }}
             initial={{ opacity: 0, y: 10 }}
@@ -303,7 +303,7 @@ const DamageFlowSection = () => {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
-                    fontWeight: 400,
+                    fontWeight: 300,
                     lineHeight: "1.7",
                   }}
                 >
