@@ -15,7 +15,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
   const badges = [
     { label: "Advance Reports", position: "-top-8 left-0" },
     { label: "Advance Filtering", position: "-top-10 right-5" },
-    { label: "Clear Interface", position: "bottom-6 left-0" },
+    { label: "Easy Decisions", position: "bottom-6 left-0" },
     { label: "Easy Export", position: "-bottom-10 -right-0" },
   ];
 
@@ -156,7 +156,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-sm font-medium px-4 py-1.5 rounded-lg shadow-xl flex items-center gap-2 drop-shadow-lg">
+                  <div className="bg-[#F94049] text-white text-sm font-medium px-4 py-1.5 rounded-full shadow-xl flex items-center gap-2 drop-shadow-lg">
                     <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Check size={12} className="text-red-500 stroke-[3]" />
                     </span>
@@ -253,7 +253,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-[#F94049] text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -269,7 +269,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-[#F94049] text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
@@ -285,11 +285,11 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-[#F94049] text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
-                  Clear Interface
+                  Easy Decisions
                 </div>
               </motion.div>
 
@@ -301,7 +301,7 @@ const InventoryReportingSection = ({}: InventoryReportingSectionProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <div className="bg-gradient-to-r from-red-400 to-red-500 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <div className="bg-[#F94049] text-white text-xs font-medium px-2 py-1 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                     <Check size={10} className="text-red-500 stroke-[3]" />
                   </span>
