@@ -13,111 +13,10 @@ import { useState, useEffect, useRef } from "react";
 
 // Import your step components
 import StepsForOrders from "./StepsForOrders";
+import DesignManagement from "./DesignManagement";
 import CutterSection from "./CutterSection";
 import PrintingSection from "./PrintingSection";
 import PressingSection from "./PressingSection";
-
-// Existing Design component (unchanged)
-const DesignManagementSection = () => {
-  const features = [
-    "View all assigned orders at a glance.",
-    "Check design name, pattern, fabric, quantity, and sublimation type.",
-    "Update order status when completed the design.",
-    "Stay organized with clear order visibility.",
-    "Ensure smooth progress from concept to completion.",
-  ];
-
-  return (
-    <div className="relative bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 min-h-[60vh] overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 right-6 sm:right-10 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gray-100 rounded-full blur-3xl opacity-60"
-          animate={{ scale: [1, 1.15, 1], x: [0, -30, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 left-6 sm:left-10 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-stone-100 rounded-full blur-3xl opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 20, 0] }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-10 sm:mb-12 lg:mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <motion.p className="text-[#FF4757] font-bold tracking-wider mb-3 sm:mb-4">
-            DESIGN
-          </motion.p>
-          <motion.h2 className="text-black font-bold leading-tight max-w-3xl sm:max-w-4xl mx-auto text-2xl sm:text-3xl md:text-4xl lg:text-[44px]">
-            Design Management
-          </motion.h2>
-        </motion.div>
-
-        {/* Content */}
-        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
-          {/* Image */}
-          <motion.div
-            className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1"
-            initial={{ opacity: 0, scale: 0.85, x: -40 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-          >
-            <img
-              src="/images/design.png"
-              alt="Design Management"
-              className="w-full h-auto object-contain drop-shadow-2xl"
-            />
-          </motion.div>
-
-          {/* Features */}
-          <motion.div
-            className="lg:flex-1 w-full space-y-6 sm:space-y-8 order-1 lg:order-2 text-center lg:text-left"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="space-y-4 max-w-lg mx-auto lg:mx-0">
-              <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl">
-                Designer's Dashboard
-              </h3>
-              <p className="text-black leading-relaxed text-sm sm:text-base">
-                Manage everything from one place. Your dashboard gives you full
-                visibility and control over your apparel orders.
-              </p>
-            </div>
-            <div className="space-y-4 sm:space-y-5 pt-2">
-              {features.map((feature, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-start gap-3 justify-start"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                >
-                  <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
-                    ✓
-                  </div>
-                  <p className="text-black">{feature}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 // ---------------- Departments Section ----------------
 const DepartmentsSection = () => {
@@ -186,7 +85,7 @@ const DepartmentsSection = () => {
       case "customer":
         return <StepsForOrders />;
       case "design":
-        return <DesignManagementSection />;
+        return <DesignManagement />;
       case "cutting":
         return <CutterSection />;
       case "printing":

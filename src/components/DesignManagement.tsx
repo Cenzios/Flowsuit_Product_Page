@@ -13,10 +13,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
   ];
 
   return (
-    <section
-      id="design-management"
-      className="relative min-h-screen bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 overflow-hidden"
-    >
+    <div className="relative bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -36,13 +33,12 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         {/* Header */}
         <motion.div
-          className="text-center mb-10 sm:mb-12 lg:mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-14"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
           <motion.p
@@ -72,8 +68,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
           <motion.div
             className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1"
             initial={{ opacity: 0, scale: 0.85, x: -40 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
             <motion.div
@@ -93,7 +88,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
               <motion.div
                 className="relative"
                 initial={{ rotateY: -5 }}
-                whileInView={{ rotateY: 0 }}
+                animate={{ rotateY: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <img
@@ -121,8 +116,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
           <motion.div
             className="lg:flex-1 w-full space-y-6 sm:space-y-8 order-1 lg:order-2 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
             {/* Section Header */}
@@ -157,8 +151,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
                   key={index}
                   className="flex items-start gap-3 justify-start max-w-lg mx-auto lg:mx-0"
                   initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
                 >
@@ -187,7 +180,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
