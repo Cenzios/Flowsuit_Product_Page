@@ -30,7 +30,7 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -130,7 +130,16 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                 <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]">
                   Client's Dashboard
                 </h3>
-                <p className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]">
+                <p
+                  className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 300,
+                    letterSpacing: "0.1em",
+                    lineHeight: "1.7",
+                  }}
+                >
                   Manage everything from one place. Our dashboard lets you view
                   and control all your apparel orders, tracking them from start
                   to finish with ease.
@@ -157,7 +166,16 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                         <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                       </div>
                     </motion.div>
-                    <p className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]">
+                    <p
+                      className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
+                      style={{
+                        fontSize: "14px",
+                        fontFamily: "'Inter', sans-serif",
+                        fontWeight: 300,
+                        letterSpacing: "0.1em",
+                        lineHeight: "1.7",
+                      }}
+                    >
                       {feature}
                     </p>
                   </motion.div>
@@ -182,7 +200,16 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                 <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]">
                   Order Placement Process
                 </h3>
-                <p className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]">
+                <p
+                  className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 300,
+                    letterSpacing: "0.1em",
+                    lineHeight: "1.7",
+                  }}
+                >
                   Manage everything from one place. Your dashboard gives you
                   full visibility and control over your apparel orders—from
                   start to finish.
@@ -209,7 +236,16 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                         <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                       </div>
                     </motion.div>
-                    <p className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]">
+                    <p
+                      className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
+                      style={{
+                        fontSize: "14px",
+                        fontFamily: "'Inter', sans-serif",
+                        fontWeight: 300,
+                        letterSpacing: "0.1em",
+                        lineHeight: "1.7",
+                      }}
+                    >
                       {feature}
                     </p>
                   </motion.div>

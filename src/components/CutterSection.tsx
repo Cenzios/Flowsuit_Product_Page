@@ -14,7 +14,7 @@ const CutterSectionManagement = ({}: CutterSectionManagementProps) => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -86,8 +86,10 @@ const CutterSectionManagement = ({}: CutterSectionManagementProps) => {
               <p
                 className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
                 style={{
+                  fontSize: "14px",
                   fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 300,
+                  letterSpacing: "0.1em",
                   lineHeight: "1.7",
                 }}
               >
@@ -119,8 +121,10 @@ const CutterSectionManagement = ({}: CutterSectionManagementProps) => {
                   <p
                     className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
                     style={{
+                      fontSize: "14px",
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontWeight: 300,
+                      letterSpacing: "0.1em",
                       lineHeight: "1.7",
                     }}
                   >

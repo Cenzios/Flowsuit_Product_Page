@@ -13,7 +13,7 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-50 via-stone-50 to-gray-100 overflow-hidden">
+    <div className="relative bg-[#F2F0E9] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -133,8 +133,10 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
               <p
                 className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
                 style={{
+                  fontSize: "14px",
                   fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 300,
+                  letterSpacing: "0.1em",
                   lineHeight: "1.7",
                 }}
               >
@@ -167,8 +169,10 @@ const DesignManagementSection = ({}: DesignManagementSectionProps) => {
                   <p
                     className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
                     style={{
+                      fontSize: "14px",
                       fontFamily: "'Inter', sans-serif",
-                      fontWeight: 400,
+                      fontWeight: 300,
+                      letterSpacing: "0.1em",
                       lineHeight: "1.7",
                     }}
                   >
