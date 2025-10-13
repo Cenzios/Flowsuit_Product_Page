@@ -1,9 +1,12 @@
-import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Check, X } from "lucide-react";
+import { useState } from "react";
 
 interface CustomerDashboardSectionProps {}
 
 const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
+  const [showPreview, setShowPreview] = useState(false);
+
   const clientFeatures = [
     "Quickly log in and access your personalized dashboard.",
     "Place new orders effortlessly with just a few clicks.",
@@ -19,6 +22,12 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
     "Specify Quantities & Sizes",
     "Place Your Order",
   ];
+
+  const handleClosePreview = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowPreview(false);
+  };
 
   return (
     <div className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden">
@@ -87,14 +96,12 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                 transition={{ duration: 0.3 }}
                 style={{ perspective: "1000px" }}
               >
-                {/* Glow */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-blue-200/50 to-indigo-100/30 blur-2xl sm:blur-3xl rounded-lg transform scale-105"
                   animate={{ opacity: [0.4, 0.6, 0.4] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
 
-                {/* Order1 Image */}
                 <motion.div
                   className="relative"
                   initial={{ rotateY: -5 }}
@@ -108,18 +115,6 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                     className="w-full h-auto object-contain drop-shadow-2xl"
                   />
                 </motion.div>
-
-                {/* Accents */}
-                <motion.div
-                  className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-indigo-200/30 rounded-full blur-lg sm:blur-xl"
-                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-blue-200/40 rounded-full blur-lg sm:blur-xl"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                />
               </motion.div>
             </motion.div>
 
@@ -131,32 +126,17 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              {/* Section Header */}
               <div className="space-y-4 max-w-lg mx-auto lg:mx-0">
-                <h3
-                  className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]"
-                  style={{
-                    fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                    lineHeight: "1.3",
-                  }}
-                >
+                <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]">
                   Client's Dashboard
                 </h3>
-                <p
-                  className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "1.7",
-                  }}
-                >
+                <p className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]">
                   Manage everything from one place. Our dashboard lets you view
                   and control all your apparel orders, tracking them from start
                   to finish with ease.
                 </p>
               </div>
 
-              {/* Features */}
               <div className="space-y-4 sm:space-y-5 pt-2">
                 {clientFeatures.map((feature, index) => (
                   <motion.div
@@ -177,14 +157,7 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                         <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                       </div>
                     </motion.div>
-                    <p
-                      className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 400,
-                        lineHeight: "1.7",
-                      }}
-                    >
+                    <p className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]">
                       {feature}
                     </p>
                   </motion.div>
@@ -205,32 +178,17 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              {/* Section Header */}
               <div className="space-y-4 max-w-lg mx-auto lg:mx-0">
-                <h3
-                  className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]"
-                  style={{
-                    fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                    lineHeight: "1.3",
-                  }}
-                >
+                <h3 className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]">
                   Order Placement Process
                 </h3>
-                <p
-                  className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "1.7",
-                  }}
-                >
+                <p className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]">
                   Manage everything from one place. Your dashboard gives you
                   full visibility and control over your apparel orders—from
                   start to finish.
                 </p>
               </div>
 
-              {/* Features */}
               <div className="space-y-4 sm:space-y-5 pt-2">
                 {orderPlacementFeatures.map((feature, index) => (
                   <motion.div
@@ -251,14 +209,7 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                         <Check className="w-3.5 h-3.5 text-white stroke-[5]" />
                       </div>
                     </motion.div>
-                    <p
-                      className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 400,
-                        lineHeight: "1.7",
-                      }}
-                    >
+                    <p className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]">
                       {feature}
                     </p>
                   </motion.div>
@@ -266,19 +217,20 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
               </div>
             </motion.div>
 
-            {/* Right Image */}
+            {/* Right Video */}
             <motion.div
-              className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-1 lg:order-2"
+              className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-1 lg:order-2 relative"
               initial={{ opacity: 0, scale: 0.85, x: 40 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.9, delay: 0.2 }}
             >
               <motion.div
-                className="relative"
-                whileHover={{ scale: 1.02, rotateY: -2 }}
+                className="relative group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
                 style={{ perspective: "1000px" }}
+                onMouseEnter={() => setShowPreview(true)}
               >
                 {/* Glow */}
                 <motion.div
@@ -287,33 +239,67 @@ const CustomerDashboardSection = ({}: CustomerDashboardSectionProps) => {
                   transition={{ duration: 4, repeat: Infinity }}
                 />
 
-                {/* Order2 Image */}
                 <motion.div
-                  className="relative"
+                  className="relative rounded-xl overflow-hidden shadow-2xl"
                   initial={{ rotateY: 5 }}
                   whileInView={{ rotateY: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img
-                    src="/images/order2.png"
-                    alt="FlowSuite Order Placement Process"
-                    className="w-full h-auto object-contain drop-shadow-2xl"
+                  <video
+                    src="/Order.mov"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-auto object-cover rounded-xl shadow-lg"
                   />
                 </motion.div>
 
-                {/* Accents */}
-                <motion.div
-                  className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-16 h-16 sm:w-24 sm:h-24 bg-purple-200/30 rounded-full blur-lg sm:blur-xl"
-                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 w-20 h-20 sm:w-32 sm:h-32 bg-indigo-200/40 rounded-full blur-lg sm:blur-xl"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                />
+                {/* Hover Label */}
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <p className="text-white text-lg font-semibold">
+                    Hovered Preview
+                  </p>
+                </div>
               </motion.div>
+
+              {/* Preview Modal */}
+              <AnimatePresence>
+                {showPreview && (
+                  <motion.div
+                    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={handleClosePreview}
+                  >
+                    <motion.div
+                      className="relative bg-black rounded-2xl shadow-2xl p-2 md:p-4 max-w-4xl w-[90%]"
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0.8, opacity: 0 }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {/* Close button */}
+                      <button
+                        onClick={handleClosePreview}
+                        className="absolute top-2 right-2 md:top-4 md:right-4 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition z-10"
+                        aria-label="Close preview"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+
+                      <video
+                        src="/Order.mov"
+                        controls
+                        autoPlay
+                        className="rounded-xl w-full h-[60vh] object-contain"
+                      />
+                    </motion.div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>
